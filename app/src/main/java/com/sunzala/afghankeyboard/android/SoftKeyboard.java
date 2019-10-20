@@ -47,6 +47,13 @@ import java.util.List;
 import github.ankushsachdeva.emojicon.EmojiconGridView;
 import github.ankushsachdeva.emojicon.EmojiconsPopup;
 import github.ankushsachdeva.emojicon.emoji.Emojicon;
+import java.net.URL;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import static com.sunzala.afghankeyboard.ThemeActivity.THEME_KEY;
 
@@ -192,15 +199,18 @@ public class SoftKeyboard extends InputMethodService
         switch (s) {
             case "ps_AF":
                 mActiveKeyboard = "ps_AF";
-                mCurKeyboard = mPashtoKeyboard;
+                //mCurKeyboard = mPashtoKeyboard;
+                mCurKeyboard = mQwertyKeyboard;
                 break;
             case "ps_latin_AF":
                 mActiveKeyboard = "ps_latin_AF";
-                mCurKeyboard = mPashtoLatinKeyboard;
+                //mCurKeyboard = mPashtoLatinKeyboard;
+                mCurKeyboard = mQwertyKeyboard;
                 break;
             case "fa_AF":
                 mActiveKeyboard = "fa_AF";
-                mCurKeyboard = mFarsiKeyboard;
+                //mCurKeyboard = mFarsiKeyboard;
+                mCurKeyboard = mQwertyKeyboard;
                 break;
             default:
                 mActiveKeyboard = "en_US";
@@ -389,15 +399,18 @@ public class SoftKeyboard extends InputMethodService
         switch (s) {
             case "ps_AF":
                 mActiveKeyboard = "ps_AF";
-                mCurKeyboard = mPashtoKeyboard;
+               // mCurKeyboard = mPashtoKeyboard;
+                mCurKeyboard = mQwertyKeyboard;
                 break;
             case "ps_latin_AF":
                 mActiveKeyboard = "ps_latin_AF";
-                mCurKeyboard = mPashtoLatinKeyboard;
+              //  mCurKeyboard = mPashtoLatinKeyboard;
+                mCurKeyboard = mQwertyKeyboard;
                 break;
             case "fa_AF":
                 mActiveKeyboard = "fa_AF";
-                mCurKeyboard = mFarsiKeyboard;
+               // mCurKeyboard = mFarsiKeyboard;
+                mCurKeyboard = mQwertyKeyboard;
                 break;
             default:
                 mActiveKeyboard = "en_US";
@@ -1044,7 +1057,39 @@ public class SoftKeyboard extends InputMethodService
 
         @Override
         protected ArrayList<String> doInBackground(String... str) {
-            list = db.getAllRow(str[0], subType);
+            String line = null;
+            try{
+                URL url = new URL("http://www.google.com/inputtools/request?ime=transliteration_en_bn&num=10&cp=0&cs=0&ie=utf-8&oe=utf-8&text="+str[0]);
+
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                StringBuilder bangla = new StringBuilder();
+
+                while((line = reader.readLine()) != null)
+                {
+                    // Append server response in string
+                    bangla.append(line + "\n");
+                }
+                line = bangla.toString();
+                Log.d("SoftKeyboard", "SUGGESTIONS: " + line);
+
+            }catch (Exception e){
+
+            }
+            Log.d("SoftKeyboard", "Input: " + (str[0]));
+            //list = db.getAllRow(str[0], subType);
+            line = line.replaceAll("[a-zA-Z0-9]", " ");
+
+            line = line.replace(","," ");
+            line = line.replace("["," ");
+            line = line.replace("]"," ");
+            line = line.replace("{"," ");
+            line = line.replace("}"," ");
+            line = line.replace("\""," ");
+            String [] s = line.split(" ");
+            for(int i=0;i<s.length;i++){
+                if(!s[i].isEmpty()) list.add(s[i]);
+            }
             return list;
         }
 
@@ -1061,12 +1106,12 @@ public class SoftKeyboard extends InputMethodService
     public void addUpdateWord() {
 
         if (!getLastWord().isEmpty()) {
-            Integer freq = db.getWordFrequency(getLastWord(), mActiveKeyboard);
-            if (freq > 0) {
-                db.updateRecord(getLastWord(), freq, mActiveKeyboard);
-            } else {
-                db.insertNewRecord(getLastWord(), mActiveKeyboard);
-            }
+            //Integer freq = db.getWordFrequency(getLastWord(), mActiveKeyboard);
+            //if (freq > 0) {
+            //    db.updateRecord(getLastWord(), freq, mActiveKeyboard);
+           // } else {
+           //     db.insertNewRecord(getLastWord(), mActiveKeyboard);
+           // }
         }
     }
 

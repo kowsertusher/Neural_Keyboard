@@ -81,7 +81,9 @@ public class LatinKeyboardView extends KeyboardView {
             return true;
 
             // For Farsi Keyboard
-        } else if (SoftKeyboard.mActiveKeyboard == "fa_AF" && key.codes[0] == 'ض') {
+        }
+        /*
+        else if (SoftKeyboard.mActiveKeyboard == "fa_AF" && key.codes[0] == 'ض') {
             getOnKeyboardActionListener().onKey('۱', null);
             return true;
         } else if (SoftKeyboard.mActiveKeyboard == "fa_AF" && key.codes[0] == 'ص') {
@@ -157,7 +159,9 @@ public class LatinKeyboardView extends KeyboardView {
             return true;
 
             // For Latin Keys
-        } else if (SoftKeyboard.mActiveKeyboard != "en_US" && (key.codes[0] == 'w' || key.codes[0] == 'W')) {
+        }
+        */
+        else if (SoftKeyboard.mActiveKeyboard != "en_US" && (key.codes[0] == 'w' || key.codes[0] == 'W')) {
             getOnKeyboardActionListener().onKey('1', null);
             return true;
         } else if (key.codes[0] == 'ə' || key.codes[0] == 'Ə') {
@@ -272,14 +276,14 @@ public class LatinKeyboardView extends KeyboardView {
                     canvas.drawText(String.valueOf(0), key.x + (key.width / 2) + 10, key.y + keyYLocation, paint);
 
                     // for Pashto and Farsi keyboards.
-                else if (key.label.toString().equals("ا"))
-                    canvas.drawText(String.valueOf("آ ء"), key.x + (key.width / 2) + 10, key.y + keyYLocation, paint);
+                //else if (key.label.toString().equals("ا"))
+                //    canvas.drawText(String.valueOf("آ ء"), key.x + (key.width / 2) + 10, key.y + keyYLocation, paint);
 
                 else if (key.label.toString().equals("."))
                     canvas.drawText(String.valueOf("..."), key.x + (key.width / 2) + 10, key.y + keyYLocation, paint);
 
-                    // for Farsi keyboards.
-                else if (SoftKeyboard.mActiveKeyboard == "fa_AF") {
+                   // for Farsi keyboards.
+               /* else if (SoftKeyboard.mActiveKeyboard == "fa_AF") {
                     if (key.label.toString().equals("ض"))
                         canvas.drawText(String.valueOf("۱"), key.x + (key.width / 2) + 10, key.y + keyYLocation, paint);
 
@@ -336,7 +340,8 @@ public class LatinKeyboardView extends KeyboardView {
                     else if (key.label.toString().equals("ټ"))
                         canvas.drawText(String.valueOf("ة"), key.x + (key.width / 2) + 10, key.y + keyYLocation, paint);
                     // For Latin Pashto
-                } else if (SoftKeyboard.mActiveKeyboard == "ps_latin_AF" || SoftKeyboard.mActiveKeyboard == "ps_latin_AF_Shift") {
+
+                }*/ else if (SoftKeyboard.mActiveKeyboard == "ps_latin_AF" || SoftKeyboard.mActiveKeyboard == "ps_latin_AF_Shift") {
                     if (key.label.toString().equals("w"))
                         canvas.drawText(String.valueOf("1"), key.x + (key.width / 2) + 10, key.y + keyYLocation, paint);
                     else if (key.label.toString().equals("ə")) {

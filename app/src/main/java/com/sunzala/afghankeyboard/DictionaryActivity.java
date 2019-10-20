@@ -53,8 +53,8 @@ public class DictionaryActivity extends AppCompatActivity implements View.OnClic
         // Array for spinner
         languages = new ArrayList<>();
         languages.add("English");
-        languages.add("Farsi");
-        languages.add("Pashto");
+        languages.add("Bangla");
+        //languages.add("Pashto");
 
         // Add items to the spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, languages);

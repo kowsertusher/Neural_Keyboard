@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity
         LinearLayout addKeyboards = findViewById(R.id.layout_AddLanguages);
         LinearLayout chooseInputMethod = findViewById(R.id.layout_ChooseInput);
         LinearLayout chooseTheme = findViewById(R.id.layout_ChooseTheme);
-        LinearLayout manageDictionaries = findViewById(R.id.layout_ManageDictionary);
+        //LinearLayout manageDictionaries = findViewById(R.id.layout_ManageDictionary);
         LinearLayout about = findViewById(R.id.layout_about);
 
         enableSetting.setOnClickListener(this);
         addKeyboards.setOnClickListener(this);
         chooseInputMethod.setOnClickListener(this);
         chooseTheme.setOnClickListener(this);
-        manageDictionaries.setOnClickListener(this);
+       // manageDictionaries.setOnClickListener(this);
         about.setOnClickListener(this);
 
         AdView adView = this.findViewById(R.id.adView);

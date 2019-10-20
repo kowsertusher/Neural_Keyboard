@@ -26,14 +26,6 @@
         android:imeSubtypeMode="keyboard"
         android:label="@string/label_subtype_generic" />
     <subtype
-        android:imeSubtypeLocale="ps_AF"
-        android:imeSubtypeMode="keyboard"
-        android:label="@string/label_subtype_generic" />
-    <subtype
-        android:imeSubtypeLocale="fa_AF"
-        android:imeSubtypeMode="keyboard"
-        android:label="@string/label_subtype_generic" />
-    <subtype
         android:imeSubtypeLocale="ps_latin_AF"
         android:imeSubtypeMode="keyboard"
         android:label="@string/pashto_latin_label" />
