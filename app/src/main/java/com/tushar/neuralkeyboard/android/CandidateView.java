@@ -1,4 +1,4 @@
-package com.sunzala.afghankeyboard.android;
+package com.tushar.neuralkeyboard.android;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.sunzala.afghankeyboard.R;
+import com.tushar.neuralkeyboard.R;
 
 import java.util.ArrayList;
 import java.util.List;

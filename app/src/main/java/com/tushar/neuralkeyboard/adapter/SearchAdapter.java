@@ -1,4 +1,4 @@
-package com.sunzala.afghankeyboard.adapter;
+package com.tushar.neuralkeyboard.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.sunzala.afghankeyboard.R;
-import com.sunzala.afghankeyboard.database.DatabaseManager;
+import com.tushar.neuralkeyboard.R;
+import com.tushar.neuralkeyboard.database.DatabaseManager;
 
 import java.util.ArrayList;
 

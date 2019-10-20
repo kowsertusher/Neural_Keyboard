@@ -1,4 +1,4 @@
-package com.sunzala.afghankeyboard;
+package com.tushar.neuralkeyboard;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -18,8 +18,8 @@ import android.widget.ListAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.sunzala.afghankeyboard.adapter.SearchAdapter;
-import com.sunzala.afghankeyboard.database.DatabaseManager;
+import com.tushar.neuralkeyboard.adapter.SearchAdapter;
+import com.tushar.neuralkeyboard.database.DatabaseManager;
 
 import java.util.ArrayList;
 

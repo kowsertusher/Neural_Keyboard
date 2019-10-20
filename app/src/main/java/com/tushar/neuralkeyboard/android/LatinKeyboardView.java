@@ -1,4 +1,4 @@
-package com.sunzala.afghankeyboard.android;
+package com.tushar.neuralkeyboard.android;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.inputmethod.InputMethodSubtype;
 
-import com.sunzala.afghankeyboard.R;
+import com.tushar.neuralkeyboard.R;
 
 import java.util.List;
 import java.util.Objects;

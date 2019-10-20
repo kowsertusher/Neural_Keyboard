@@ -1,4 +1,4 @@
-package com.sunzala.afghankeyboard.database;
+package com.tushar.neuralkeyboard.database;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -7,12 +7,12 @@ import android.text.Html;
 import android.util.Log;
 
 
-import com.sunzala.afghankeyboard.R;
+import com.tushar.neuralkeyboard.R;
 
 import java.util.ArrayList;
 
 /**
- * Created by Maihan Nijat on 2016-12-30.
+ * Created by Tushar on 2016-12-30.
  */
 
 public class DatabaseManager {

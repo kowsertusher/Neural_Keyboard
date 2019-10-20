@@ -1,4 +1,4 @@
-package com.sunzala.afghankeyboard.database;
+package com.tushar.neuralkeyboard.database;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

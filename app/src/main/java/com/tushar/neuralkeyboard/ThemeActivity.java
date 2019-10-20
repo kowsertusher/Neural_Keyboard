@@ -1,4 +1,4 @@
-package com.sunzala.afghankeyboard;
+package com.tushar.neuralkeyboard;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;

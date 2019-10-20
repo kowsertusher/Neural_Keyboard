@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.sunzala.afghankeyboard.android;
+package com.tushar.neuralkeyboard.android;
 
 import android.app.Dialog;
 import android.content.SharedPreferences;
@@ -40,8 +40,8 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
-import com.sunzala.afghankeyboard.R;
-import com.sunzala.afghankeyboard.database.DatabaseManager;
+import com.tushar.neuralkeyboard.R;
+import com.tushar.neuralkeyboard.database.DatabaseManager;
 import java.util.ArrayList;
 import java.util.List;
 import github.ankushsachdeva.emojicon.EmojiconGridView;
@@ -55,7 +55,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static com.sunzala.afghankeyboard.ThemeActivity.THEME_KEY;
+import static com.tushar.neuralkeyboard.ThemeActivity.THEME_KEY;
 
 /**
  * Example of writing an input method for a soft keyboard.  This code is

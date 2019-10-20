@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.sunzala.afghankeyboard.android;
+package com.tushar.neuralkeyboard.android;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,8 +24,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.sunzala.afghankeyboard.R;
-import com.sunzala.afghankeyboard.inputMethod.InputMethodSettingsFragment;
+import com.tushar.neuralkeyboard.R;
+import com.tushar.neuralkeyboard.inputMethod.InputMethodSettingsFragment;
 
 /**
  * Displays the IME preferences inside the input method setting.

@@ -1,4 +1,4 @@
-package com.sunzala.afghankeyboard;
+package com.tushar.neuralkeyboard;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.sunzala.afghankeyboard.android.ImePreferences;
+import com.tushar.neuralkeyboard.android.ImePreferences;
 
 import java.util.List;
 

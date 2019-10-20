@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.sunzala.afghankeyboard.android;
+package com.tushar.neuralkeyboard.android;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
@@ -21,7 +21,7 @@ import android.graphics.drawable.Drawable;
 import android.inputmethodservice.Keyboard;
 import android.view.inputmethod.EditorInfo;
 
-import com.sunzala.afghankeyboard.R;
+import com.tushar.neuralkeyboard.R;
 
 class LatinKeyboard extends Keyboard {
     private Key mEnterKey;

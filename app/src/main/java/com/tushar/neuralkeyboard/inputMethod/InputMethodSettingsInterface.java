@@ -20,7 +20,7 @@
  * Project.
  */
 
-package com.sunzala.afghankeyboard.inputMethod;
+package com.tushar.neuralkeyboard.inputMethod;
 
 import android.graphics.drawable.Drawable;
 
